@@ -16,20 +16,20 @@ public:
 
   option() = default;
 
-  option(const char *long_name) : long_name_{long_name} {}
+  constexpr option(const char *long_name) : long_name_{long_name} {}
 
-  option(const char *long_name, int short_name)
+  constexpr option(const char *long_name, int short_name)
       : long_name_{long_name}, short_name_{short_name}
   {
   }
 
-  option(const char *long_name, int short_name, enum arg has_arg)
+  constexpr option(const char *long_name, int short_name, enum arg has_arg)
       : long_name_{long_name}, arg_{has_arg}, short_name_{short_name}
   {
   }
 
   // Traditional getopt style option definition:
-  option(const char *long_name, enum arg has_arg, int *flag, int short_name)
+  constexpr option(const char *long_name, enum arg has_arg, int *flag, int short_name)
       : long_name_{long_name},
         arg_{has_arg},
         flag_{flag},

@@ -10,11 +10,11 @@ int parse(int argc, char *const argv[], const char *opt_string);
 
 // Behaves exactly like getopt_long(3)
 int parse(int argc, char *const *argv, const char *opt_string,
-          const option *options, int *index);
+          const option *options, int *index = nullptr);
 
 // Behaves exactly like getopt_long_only(3)
 int parse_long(int argc, char *const *argv, const char *opt_string,
-               const option *options, int *index);
+               const option *options, int *index = nullptr);
 
 } // namespace getoptpp
 
