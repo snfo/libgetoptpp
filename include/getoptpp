@@ -1,0 +1,8 @@
+// -*- C++ -*-
+#ifndef __GETOPTPP__
+#define __GETOPTPP__
+
+#include <getoptpp_internal/option.hpp>
+#include <getoptpp_internal/parse.hpp>
+
+#endif // __GETOPTPP__
