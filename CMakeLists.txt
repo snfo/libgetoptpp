@@ -4,7 +4,7 @@ set(CMAKE_CXX_STANDARD 17)
 add_compile_options(-Wall -Wextra -Werror -Wshadow -Wnon-virtual-dtor
                     -Wold-style-cast -Wcast-align -Wunused
                     -Woverloaded-virtual -Wnull-dereference -Wdouble-promotion
-                    -fno-rtti -fno-exceptions)
+                    -Wno-unused-private-field -fno-rtti -fno-exceptions)
 
 project(libgetoptpp)
 

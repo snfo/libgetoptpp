@@ -29,7 +29,8 @@ public:
   }
 
   // Traditional getopt style option definition:
-  constexpr option(const char *long_name, enum arg has_arg, int *flag, int short_name)
+  constexpr option(const char *long_name, enum arg has_arg, int *flag,
+                   int short_name)
       : long_name_{long_name},
         arg_{has_arg},
         flag_{flag},
@@ -41,10 +42,10 @@ private:
   // NOTE: The following variables must be declared in the following order!
   //       A pointer to this object must be able to be casted to a pointer to
   //       the OG `option' struct from the C getopt library.
-  [[maybe_unused]] const char *long_name_ = nullptr;
-  [[maybe_unused]] enum arg arg_ = arg::no;
-  [[maybe_unused]] int *flag_ = nullptr;
-  [[maybe_unused]] int short_name_ = 0;
+  const char *long_name_ = nullptr;
+  enum arg arg_ = arg::no;
+  int *flag_ = nullptr;
+  int short_name_ = 0;
 };
 
 } // namespace getoptpp
