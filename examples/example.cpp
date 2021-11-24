@@ -25,7 +25,7 @@ int main(int argc, char **argv)
 {
   using namespace getoptpp;
 
-  const getoptpp::option options[] = {
+  const option options[] = {
     // option1 and option2 show the traditional way of defining options with
     // getopt, which is still supported with getoptpp.
     {"option1", arg::required, nullptr, '1'},
