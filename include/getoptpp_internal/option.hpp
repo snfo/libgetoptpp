@@ -41,10 +41,10 @@ private:
   // NOTE: The following variables must be declared in the following order!
   //       A pointer to this object must be able to be casted to a pointer to
   //       the OG `option' struct from the C getopt library.
-  const char *long_name_ = nullptr;
-  enum arg arg_ = arg::no;
-  int *flag_ = nullptr;
-  int short_name_ = 0;
+  [[maybe_unused]] const char *long_name_ = nullptr;
+  [[maybe_unused]] enum arg arg_ = arg::no;
+  [[maybe_unused]] int *flag_ = nullptr;
+  [[maybe_unused]] int short_name_ = 0;
 };
 
 } // namespace getoptpp
